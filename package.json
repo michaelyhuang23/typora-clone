@@ -1,0 +1,30 @@
+{
+  "name": "typora-clone",
+  "private": true,
+  "version": "0.1.0",
+  "main": "electron/main.cjs",
+  "type": "module",
+  "scripts": {
+    "web": "python3 -m http.server 4173",
+    "desktop": "electron .",
+    "pack:mac": "electron-builder --mac --publish never"
+  },
+  "devDependencies": {
+    "electron": "^35.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.local.typora-clone",
+    "productName": "Typora Clone",
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.productivity"
+    },
+    "files": [
+      "index.html",
+      "src/**/*",
+      "electron/**/*",
+      "package.json"
+    ]
+  }
+}

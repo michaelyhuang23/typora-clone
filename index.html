@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typora Clone WYSIWYG</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <h1>Typora Clone</h1>
+        <div class="toolbar" role="toolbar" aria-label="Formatting toolbar">
+          <button data-cmd="bold" title="Bold (Cmd/Ctrl+B)">B</button>
+          <button data-cmd="italic" title="Italic (Cmd/Ctrl+I)">I</button>
+          <button data-cmd="insertUnorderedList" title="Bulleted list">• List</button>
+          <button data-cmd="insertOrderedList" title="Numbered list">1. List</button>
+          <button data-action="h1" title="Heading 1">H1</button>
+          <button data-action="h2" title="Heading 2">H2</button>
+          <button data-action="math" title="Insert math (Cmd/Ctrl+M)">Math</button>
+          <button data-action="export-md" title="Export markdown">Export .md</button>
+          <label class="import-btn" title="Import markdown">
+            Import .md
+            <input id="import-md" type="file" accept=".md,text/markdown,text/plain" />
+          </label>
+        </div>
+        <div class="meta" id="latency">Math pass: -- ms</div>
+      </header>
+
+      <main class="workspace">
+        <article
+          id="editor"
+          class="editor markdown-body"
+          contenteditable="true"
+          spellcheck="true"
+          aria-label="WYSIWYG Markdown editor"
+        ></article>
+      </main>
+    </div>
+
+    <aside id="math-preview" class="math-preview" hidden>
+      <div class="math-preview-title">LaTeX Preview</div>
+      <div id="math-preview-content" class="math-preview-content"></div>
+    </aside>
+
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/turndown@7.2.0/dist/turndown.js"></script>
+    <script src="./src/main.js"></script>
+  </body>
+</html>
