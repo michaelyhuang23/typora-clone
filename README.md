@@ -2,7 +2,7 @@
 
 ## Download (macOS)
 
-- [Download the latest DMG](https://github.com/<your-username>/<your-repo>/releases/latest/download/Typora-Clone.dmg)
+- [Download the latest DMG](https://github.com/michaelyhuang23/typora-clone/releases/latest/download/Typora-Clone.dmg)
 
 ## Build for Web
 
