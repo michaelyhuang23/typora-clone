@@ -1,5 +1,7 @@
 # Typora Clone
 
+![product image](screenshot.png)
+
 ## Download (macOS)
 
 - [Download the latest DMG](https://github.com/michaelyhuang23/typora-clone/releases/latest/download/Typora-Clone.dmg)
